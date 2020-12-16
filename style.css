@@ -34,11 +34,10 @@ span {
 }
 
 #resultat {
-    margin-top: 15px;
     text-align: center;
     font-size: x-large;
     width: 40%;
-    margin: auto;
+    margin: 15px auto;
 }
 #scoreJ  {
     margin-top: 15px;
@@ -47,5 +46,10 @@ span {
 #scoreR {
     margin-top: 15px;
     margin-left: 80px;
+}
+#historique {
+    font-size: medium;
+    margin-top: 10px;
+
 }
 

@@ -1,7 +1,8 @@
 
 let buttons = document.getElementsByTagName("button");
-resultJoueur = 0;
-resultRobot = 0;
+let historique = document.getElementById("historique");
+let resultJoueur = 0;
+let resultRobot = 0;
 
 for(let i = 0; i <  buttons.length; i++){
     buttons[i].addEventListener("click", function (){
@@ -20,19 +21,22 @@ for(let i = 0; i <  buttons.length; i++){
                 affiche = "vous Gagné !!";
                 document.getElementById("resultat").style.backgroundColor = "green";
                 document.getElementById("resultat").style.border = "1px solid";
-                resultJoueur +1;
+                resultJoueur ++;
         }
         else {
                 affiche = "c'est Perdu !!";
                 document.getElementById("resultat").style.backgroundColor = "crimson";
                 document.getElementById("resultat").style.border = "1px solid";
-                resultRobot + 1;
+                resultRobot ++;
         }
             document.getElementById("span").innerHTML = "joueur : " + joueur + " & " + "robot : " + robot;
             document.getElementById("resultat").innerHTML = affiche;
+            document.getElementById("scoreJ").innerHTML = "score joueur : " + resultJoueur;
+            document.getElementById("scoreR").innerHTML = "score robot : " + resultRobot;
+            historique.innerHTML += document.createElement("p").innerHTML + "joueur : " + joueur + " & " + "robot : " + robot +"<br>";
 
     });
+
 }
 
-document.getElementById("scoreJ").innerHTML = "score joueur : " + resultJoueur;
-document.getElementById("scoreR").innerHTML = "score robot : " + resultRobot;
+
